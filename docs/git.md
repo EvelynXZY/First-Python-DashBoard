@@ -35,14 +35,14 @@ That's it for initial setup.
 1. Make sure your repository is up to date with all of your local changes using `git status`.  
     - If you have uncommitted code, you'll need to commit or stash the changes using `git stash` before pulling code and switching branches.
 
-2. Run `git fetch upstream` to retrieve the latest branches and commits from the `upstream` branch; these arent merged with your local clone yet though. You can view a list of all your branches with `git branch -v -a`. For each assignment, I will put a new Markdown file in `docs/instructions`, e.g. `hw1.md` for you to fetch.
+2. Run `git fetch upstream` to retrieve the latest branches and commits from the `upstream` branch; these arent merged with your local clone yet though. You can view a list of all your branches with `git branch -v -a`. For each assignment, I will put a new Markdown file in `docs/assignments` named e.g. `hw1.md` for you to fetch.
     > Review this diagram and understand the differences between the `upstream` repo, the `origin` repo, and your local repo:
 
     ![](https://i.stack.imgur.com/cEJjT.png)
 
 3. Check out the assignment branch using the command `git switch -c hw1 upstream/hw1` where `hw1` can be whatever assignment branch you would like to check out. The `-c` argument creates a local copy of the upstream branch.
 
-4. View the instructions for the assignment. The easiest way to do this is probably by navigating to the `docs` folder in the [upstream repository](https://github.com/wustl-data/assignments/tree/main/docs) on GitHub, but you can also view it directly from VS Code (preview icon in upper right, or Ctrl+Shift+V) or by using `grip` (e.g. `grip docs/instructions/hw1.md`)
+4. View the assignment. One way to view is to open the `docs` folder in the [upstream repository](https://github.com/wustl-data/assignments/tree/main/docs) on GitHub, but you can also view it directly from VS Code (preview icon in upper right, or Ctrl+Shift+V) or by using `grip` (e.g. `grip docs/assignments/hw1.md`) to start a rendering server (view the markdown in the browser, and open a new terminal while the server runs).
 
 5. Work from the assignment branch as you go -- feel free to make additional branches off of this branch if you want to try new things in your code without fear of losing code that works!
 
