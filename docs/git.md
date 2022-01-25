@@ -3,7 +3,7 @@ Here are some instructions for working with git and GitHub as we work through ou
 
 ## Before your first assignment
 
-1. Fork this repository to your GitHub account.
+1. [Fork this repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo) to your GitHub account.
 
     > _Forking_ a project gives you your own repository to work with on GitHub, so you can directly push and pull changes (i.e. upload/download from GitHub) for me (or others, or Gradescope) to review. Other than that, it's not much different than a clone conceptually. Note that you can't push changes to the classroom repository without making a _pull request_ -- which you are encouraged to do if you find mistakes.
 
