@@ -103,7 +103,10 @@ git push origin pull_request_yourname
 Now you can create a pull request via the Github UI for the upstream repo.
 
 ## After each assignment
-1. On your assignment branch, push your changes to your `origin` repo on GitHub: `git push`
+1. On your assignment branch, push your changes to your `origin` repo on GitHub:
+    ```
+    git push
+    ```
 2. Submit your assignment to GradeScope using the GitHub uploader or a .zip of your repository (latter method not tested).
 
 
