@@ -4,27 +4,31 @@ Here are some instructions for working with git and GitHub as we work through ou
 ## Before your first assignment
 
 ----------
-1. In the GitHub UI, create a private repository in the wustl-data organization called `assignments-<your_WUSTL_ID>`, substituting your WUSTL ID.
+1. In the GitHub UI, create a private repository in the wustl-data organization called `assignments-<your_WUSTL_name>`, substituting your WUSTL login name.
 
 2. Run the following to make your own copy of the "template" (_upstream_) repository and put it on GitHub with the correct permissions set:
-    ```bash
+    > Don't forget to substitute http links with SSH links if you set up your git credentials with SSH.
+    ```
     git clone --bare https://github.com/wustl-data/assignments.git
-    cd assignments
-    git push --mirror https://github.com/wustl-data/assignments-<your_WUSTL_ID>.git
+    cd assignments.git
+    git push --mirror https://github.com/wustl-data/assignments-<your_WUSTL_name>.git
     cd ..
-    rm -rf assignments.git
+    ```
+    Delete your local cache of the repo:
+    ```
+    rm -rf assignments.git 
     ```
 
 3. Clone your private version of the repo so you can work on it locally:
 
-    ```bash
-    git clone https://github.com/yourname/private-repo.git
-    cd private-repo
+    ```
+    git clone https://github.com/wustl-data/assignments-<your_WUSTL_name>.git
+    cd assignments-<your_WUSTL_name>
     ```
 
 4. Add the class repo as a remote repo called `upstream`:
 
-    ```bash
+    ```
     git remote add upstream https://github.com/wustl-data/assignments.git
     ```
 
@@ -33,16 +37,18 @@ That's it for initial setup.
 ## Before each assignment
 
 1. Make sure your repository is up to date with all of your local changes using `git status`.  
-    - If you have uncommitted code, you'll need to commit or stash the changes using `git stash` before pulling code and switching branches.
+    - If you have uncommitted code, you'll want to commit or stash the changes using `git stash` before pulling code and switching branches.
 
 2. Run `git fetch upstream` to retrieve the latest branches and commits from the `upstream` branch; these arent merged with your local clone yet though. You can view a list of all your branches with `git branch -v -a`. For each assignment, I will put a new Markdown file in `docs/assignments` named e.g. `hw1.md` for you to fetch.
     > Review this diagram and understand the differences between the `upstream` repo, the `origin` repo, and your local repo:
 
     ![](https://i.stack.imgur.com/cEJjT.png)
 
+Run `git status` and `git diff` to examine changes and `git merge FETCH_HEAD` to merge them.
+
 3. Check out the assignment branch using the command `git switch -c hw1 upstream/hw1` where `hw1` can be whatever assignment branch you would like to check out. The `-c` argument creates a local copy of the upstream branch.
 
-4. View the assignment. One way to view is to open the `docs` folder in the [upstream repository](https://github.com/wustl-data/assignments/tree/main/docs) on GitHub, but you can also view it directly from VS Code (preview icon in upper right, or Ctrl+Shift+V) or by using `grip` (e.g. `grip docs/assignments/hw1.md`) to start a rendering server (view the markdown in the browser, and open a new terminal while the server runs).
+4. View the assignment. One way to view is to open the `docs` folder in the [upstream repository](https://github.com/wustl-data/assignments/tree/main/docs) on GitHub, but you can also view it directly from VS Code (preview icon in upper right, or Ctrl+Shift+V) or by using `grip` (e.g. `grip docs/assignments/hw1.md`) to start a rendering server (view the markdown in the browser, and open a new terminal while the server runs). 
 
 5. Work from the assignment branch as you go -- feel free to make additional branches off of this branch if you want to try new things in your code without fear of losing code that works!
 
@@ -50,12 +56,10 @@ That's it for initial setup.
 
 1. Run step 2 in the previous section ("Run `git fetch upstream`...") before every working session to always have the most up to date instructions -- I might even add some helper code for folks to pull down if a lot of people are struggling with a certain aspect of the assignment.
     > More advanced git for the curious: We shouldn't get any [_merge conflicts_](https://docs.microsoft.com/en-us/visualstudio/version-control/git-resolve-conflicts?view=vs-2022) when running a fetch or pull since you shouldn't be editing the `docs` files I provide, and I shouldn't be editing any code you provide. It's common practice (and good practice) to run `git fetch` instead of `git pull` to avoid automatically merging changes that came from the remote repository, however, `git pull` may be used as a shortcut if you're sure about the changes.
-    
-    > When pulling or fetching remote changes, you might be curious about what exactly has changed about the remote code before you merge it with your code base. Running `git fetch` followed by a `git status` or a `git diff` allows for an easy way for you to do this.  However, if you do run `git fetch` instead of `git pull`, _don't forget to merge the changes_ with `git merge FETCH_HEAD`.
 
 2. Make sure you're on the right branch before you get started: `git branch` to see all your branches and `git checkout <branch name>` to switch branches.
 
-3. Not git-related, but don't forget to activate your virtual environment each session with `poetry shell`, or you will run into `ModuleNotFound` errors.
+3. Not git-related, but don't forget to activate your virtual environment each session with `poetry shell`, or you will run into `ModuleNotFound` errors. Run `exit` to quit the virtual environment.
 
 4. **ABC - Always Be Committing**. Don't forget to make frequent commits so I can retroactively track the progress of your code as you worked on it.
 
