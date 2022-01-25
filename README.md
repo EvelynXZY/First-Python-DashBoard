@@ -10,7 +10,4 @@ Find more details in the documents contained in the `docs/` folder:
 2. [Homework assignments](./docs/instructions/)
 
 
-
-
-
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>

@@ -22,7 +22,7 @@ That's it for initial setup.
 2. Check out the `main` branch in your local repository with `git checkout main`.
 
 3. Pull down the latest assignment from the upstream `main` branch with `git pull upstream`. For each assignment I will put a new Markdown file in `docs/instructions`, e.g. `hw1.md`.
-    > GitHub also has a nifty button to `fetch upstream` changes to your forked repo -- check it out.
+    > GitHub also has a nifty button to `fetch upstream` changes to your forked repo -- check it out, and run `git pull` instead of `git pull upstream` if you use this button to get your local copy in sync.
 
 4. View the instructions for the assignment. The easiest way to do this is probably by navigating to the `docs` folder in the [upstream repository](https://github.com/wustl-data/assignments) on GitHub, but you can also view it directly from VS Code (preview icon in upper right, or Ctrl+Shift+V) or by using `grip` (e.g. `grip docs/instructions/hw1.md`)
 
