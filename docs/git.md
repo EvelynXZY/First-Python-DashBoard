@@ -38,16 +38,18 @@ That's it for initial setup.
 1. Run step 2 in the previous section ("Run `git fetch upstream`...") before every working session to always have the most up to date instructions -- I might even add some helper code for folks to pull down if a lot of people are struggling with a certain aspect of the assignment.
     > Advanced note for the curious: We shouldn't get any [_merge conflicts_](https://docs.microsoft.com/en-us/visualstudio/version-control/git-resolve-conflicts?view=vs-2022) when running a fetch or pull since you shouldn't be editing the `docs` files I provide, and I shouldn't be editing any code you provide. It's common practice (and good practice) to run `git fetch` instead of `git pull` to avoid automatically merging changes that came from the remote repository, however, `git pull` may be used as a shortcut if you're sure about the changes. Additionally, you might be curious about what exactly has changed about the remote code right off the bat. Running `git fetch` followed by a `git status` or a `git diff` allows for an easy way for you to do this.  However, if you do run `git fetch` instead of `git pull`, _don't forget to merge the changes_ with `git merge FETCH_HEAD`.
 
-2. Not git-related, but don't forget to activate your virtual environment each session with `poetry shell`, or you will run into `ModuleNotFound` errors.
+2. Make sure you're on the right branch before you get started: `git branch` to look and `git checkout <branch name>` to switch branches.
 
-3. **ABC - Always Be Committing**. Don't forget to make frequent commits so I can retroactively track the progress of your code as you worked on it.
+3. Not git-related, but don't forget to activate your virtual environment each session with `poetry shell`, or you will run into `ModuleNotFound` errors.
 
-3. I may decide to provide some tests for your code so that you can run your autograder tests locally instead of needing to upload to Gradescope every time you would like to check correctness. To run these tests, simply use the command `pytest`. Of course, regardless of local tests, you may upload to Gradescope at any time--this will help me give you feedback if you need it. Gradescope runs the "official" tests using `pytest` behind the scenes. 
+4. **ABC - Always Be Committing**. Don't forget to make frequent commits so I can retroactively track the progress of your code as you worked on it.
+
+5. I may decide to provide some tests for your code so that you can run your autograder tests locally instead of needing to upload to Gradescope every time you would like to check correctness. To run these tests, simply use the command `pytest`. Of course, regardless of local tests, you may upload to Gradescope at any time--this will help me give you feedback if you need it. Gradescope runs the "official" tests using `pytest` behind the scenes. 
     > Hint: a new passing test is usually a good opportunity to commit your code.
 
-4. If you are running into problems, please post an issue on the [**upstream** repository issue board](https://github.com/wustl-data/assignments/issues). This is where I and your classmates are most likely to see it. If you have sensitive information in your issue that would be considered sharing an answer or sensitive information, you may start an issue in your private GitHub repo, but you may need to get my attention by tagging me in GitHub or sending me an email. Open private issues sparingly; you usually should be able to present your issues in an appropriate context.
+6. If you are running into problems, please post an issue on the [**upstream** repository issue board](https://github.com/wustl-data/assignments/issues). This is where I and your classmates are most likely to see it. If you have sensitive information in your issue that would be considered sharing an answer or sensitive information, you may start an issue in your private GitHub repo, but you may need to get my attention by tagging me in GitHub or sending me an email. Open private issues sparingly; you usually should be able to present your issues in an appropriate context.
 
-5. I suggest leaving your issue open until the assignment is due, even if the issue is resolved, so other students can more easily see the discussion if they have a similar question. However, feel free to close the issue if it feels like clutter.
+7. I suggest leaving your issue open until the assignment is due, even if the issue is resolved, so other students can more easily see the discussion if they have a similar question. However, feel free to close the issue if it feels like clutter.
 
 ## After each assignment
 1. On your assignment branch, push your changes to the `origin` repo on GitHub: `git push`
