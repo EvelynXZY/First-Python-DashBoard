@@ -1,6 +1,8 @@
 # Git overview
 Here are some instructions for working with git and GitHub as we work through our assignments.  Follow directions closely and be careful and methodical with your changes in git -- it can be easy to mess things up. 
 
+For some it may be useful to have a GUI interface for GitHub -- I hear good things about [GitHub Desktop](https://desktop.github.com/). If you find yourself struggling to keep pace with git concepts, the app might be useful. If you can, however, try to get back to (or stick with) the command line -- building your command line skills will allow you to write code faster and more precisely. See our [Resources](./resources) page for some helpful articles and tutorials.
+
 ## Before your first assignment
 
 ----------
