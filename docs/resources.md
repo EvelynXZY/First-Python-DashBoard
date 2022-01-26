@@ -19,3 +19,6 @@ Here are some helpful documentation links, blog posts, and tutorials on concepts
 
 ### APIs:
 - [Traits of a good REST API](https://smartbear.com/learn/api-design/traits-of-a-good-rest-api/) - Blog
+
+### Testing:
+- [Red-Green-Refactor](https://www.codecademy.com/article/tdd-red-green-refactor) - Blog
