@@ -52,13 +52,15 @@ That's it for initial setup.
     2. (Optional) Examine the changes to the repository to your satisfaction for a given branch by running:
         ```
         git log main..upstream/main
+        git log main..upstream/hw1
         ```
         which shows the commit messages of the changes, or:
         ```
         git diff main upstream/main
+        git diff main upstream/hw1
         ```
         which shows the line-by-line diff of the changes.
-    3. (not optional) Merge the changes with `git merge upstream/main`. In the unfortunate circumstance that you run into any merge conflicts at this step, try to resolve them but reach out for help if you need to.
+    3. (not optional) Merge the changes with `git merge upstream/main`/`git merge upstream/hw1`. In the unfortunate circumstance that you run into any merge conflicts at this step, try to resolve them but reach out for help if you need to.
 
     > If you'd like to condense these commands into one, you can run `git pull upstream` which will automatically merge changes. Use with caution.
 
