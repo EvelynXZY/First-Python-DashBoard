@@ -60,7 +60,7 @@ That's it for initial setup.
         git diff main upstream/hw1
         ```
         which shows the line-by-line diff of the changes.
-    3. (not optional) Merge the changes with `git merge upstream/main`/`git merge upstream/hw1`. In the unfortunate circumstance that you run into any merge conflicts at this step, try to resolve them but reach out for help if you need to.
+    3. (not optional) Merge changes to a given branch by checking out that branch and then running: `git merge upstream/<branch name>`. In the unfortunate circumstance that you run into any merge conflicts at this step, try to resolve them but reach out for help if you need to.
 
     > If you'd like to condense these commands into one, you can run `git pull upstream` which will automatically merge changes. Use with caution.
 
