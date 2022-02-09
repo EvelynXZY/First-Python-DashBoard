@@ -7,6 +7,7 @@ authors = ["Your Name <you@example.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 pandas = "^1.4.0"
+dash = "^2.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0.0"
