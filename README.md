@@ -4,7 +4,7 @@
 --------
 
 This is the public repo for assignment2: Python Dashboard <br />
-Link to document: https://first-python-dashboard.readthedocs.io/en/latest/
+Link to document: https://first-python-dashboard.readthedocs.io/en/main/
 
 
 ***
