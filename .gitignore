@@ -11,10 +11,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-<<<<<<< HEAD
-=======
 env/
->>>>>>> c5fa4a1c74d6114b6bb9105a7e6ff9e5656e7554
 build/
 develop-eggs/
 dist/
