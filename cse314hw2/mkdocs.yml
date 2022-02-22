@@ -1,4 +1,5 @@
 site_name: HW2
+site_url: site_url
 nav:
     - Home: index.md
     - Agricultral Export Dataset: ag.md
