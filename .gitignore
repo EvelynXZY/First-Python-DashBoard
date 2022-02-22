@@ -1,13 +1,20 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+<<<<<<< HEAD
 *$py.class
+=======
+>>>>>>> c5fa4a1c74d6114b6bb9105a7e6ff9e5656e7554
 
 # C extensions
 *.so
 
 # Distribution / packaging
 .Python
+<<<<<<< HEAD
+=======
+env/
+>>>>>>> c5fa4a1c74d6114b6bb9105a7e6ff9e5656e7554
 build/
 develop-eggs/
 dist/
@@ -19,6 +26,7 @@ lib64/
 parts/
 sdist/
 var/
+<<<<<<< HEAD
 wheels/
 pip-wheel-metadata/
 share/python-wheels/
@@ -26,6 +34,11 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+=======
+*.egg-info/
+.installed.cfg
+*.egg
+>>>>>>> c5fa4a1c74d6114b6bb9105a7e6ff9e5656e7554
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -40,16 +53,22 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+<<<<<<< HEAD
 .nox/
+=======
+>>>>>>> c5fa4a1c74d6114b6bb9105a7e6ff9e5656e7554
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *.cover
+<<<<<<< HEAD
 *.py,cover
 .hypothesis/
 .pytest_cache/
+=======
+>>>>>>> c5fa4a1c74d6114b6bb9105a7e6ff9e5656e7554
 
 # Translations
 *.mo
@@ -57,6 +76,7 @@ coverage.xml
 
 # Django stuff:
 *.log
+<<<<<<< HEAD
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -67,6 +87,8 @@ instance/
 
 # Scrapy stuff:
 .scrapy
+=======
+>>>>>>> c5fa4a1c74d6114b6bb9105a7e6ff9e5656e7554
 
 # Sphinx documentation
 docs/_build/
@@ -74,6 +96,7 @@ docs/_build/
 # PyBuilder
 target/
 
+<<<<<<< HEAD
 # Jupyter Notebook
 .ipynb_checkpoints
 
@@ -127,3 +150,41 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+=======
+# DotEnv configuration
+.env
+
+# Database
+*.db
+*.rdb
+
+# Pycharm
+.idea
+
+# VS Code
+.vscode/
+
+# Spyder
+.spyproject/
+
+# Jupyter NB Checkpoints
+.ipynb_checkpoints/
+
+
+# Mac OS-specific storage files
+.DS_Store
+
+# vim
+*.swp
+*.swo
+
+# Mypy cache
+.mypy_cache/
+
+poetry.lock
+
+.pytest_cache/
+
+
+site/
+>>>>>>> c5fa4a1c74d6114b6bb9105a7e6ff9e5656e7554

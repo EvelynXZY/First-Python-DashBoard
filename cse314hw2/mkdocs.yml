@@ -1,0 +1,7 @@
+site_name: HW2
+nav:
+    - Home: index.md
+    - Agricultral Export Dataset: ag.md
+    - Apple Stock Dataset: apple.md
+    - AA Flight Path Dataset: flight.md
+theme: readthedocs
