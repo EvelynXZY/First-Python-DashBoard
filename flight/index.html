@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>AA Flight Path Dataset - HW2</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "AA Flight Path Dataset";
+    var mkdocs_page_input_path = "flight.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> HW2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ag/">Agricultral Export Dataset</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../apple/">Apple Stock Dataset</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">AA Flight Path Dataset</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#why-the-visualization-is-interesting">Why the visualization is interesting?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo">Demo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#callbacks">Callbacks</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">HW2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>AA Flight Path Dataset</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="american-airlines-flight-path-dataset-2011">American Airlines Flight Path Dataset (2011)</h1>
+<p>For full dataset view <a href="https://github.com/plotly/datasets/blob/master/2011_february_aa_flight_paths.csv">2011_february_aa_flight_paths.csv</a> and 
+<a href="https://github.com/plotly/datasets/blob/master/2011_february_us_airport_traffic.csv">2011_february_us_airport_traffic.csv</a></p>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>
+<h3 id="why-the-visualization-is-interesting">Why the visualization is interesting?<br /></h3>
+<ul>
+<li>Dataset is visualized on a map.</li>
+<li>Users can choose filter types to view all flight paths, find flight paths by departure/arrival airports, or flight paths associated with AA hubs. <br /></li>
+<li>This visualization includes a <strong>chained callback</strong>. Whenever a filter is selected, a checklist containing the filtered airports will appear for further selection.</li>
+</ul>
+</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<p><img alt="ag_DEMO1" src="../demo_pics/aa_DEMO1.png" />
+<img alt="ag_DEMO2" src="../demo_pics/aa_DEMO2.png" />
+<img alt="ag_DEMO3" src="../demo_pics/aa_DEMO3.png" /></p>
+<h2 id="callbacks">Callbacks</h2>
+<p><code>generate_checklist_from_filter(filter_choice):</code> - Generate a checklist of airports based on the filter type selection</p>
+<p><strong>Parameters:</strong><br />
+<strong> - filter_choice: </strong> <code>str</code> a selected filter name from the dropdown list<br />
+<strong> - returns: </strong> <br />
+--<code>str</code> a list of airport codes that will be the <code>options</code> for the airport checklist<br />
+--<code>str</code> a list of airport codes that will be the default 'value' for the for the airport checklist</p>
+<p><code>update_flight_map(filter_type, airport_choice):</code> - Update the flight path map based on the current selected filter type and airport checklist selections</p>
+<p><strong>Parameters:</strong><br />
+<strong> - filter_type: </strong> <code>str</code> a selected filter name from the dropdown list<br />
+<strong> - airport_choice: </strong> <code>str</code> a list of selected airport codes from the airport checklist<br />
+<strong> - returns: </strong> <code>figure</code>  an updated flight path map that will be passed into the dcc.Graph component<br /></p>
+<p><img alt="aa_callback" src="../demo_pics/aa_callback.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../apple/" class="btn btn-neutral" title="Apple Stock Dataset"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../apple/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

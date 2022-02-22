@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Agricultral Export Dataset - HW2</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Agricultral Export Dataset";
+    var mkdocs_page_input_path = "ag.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> HW2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Agricultral Export Dataset</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#why-the-visualization-is-interesting">Why the visualization is interesting?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#why-ecdfs-are-preferable-to-histograms">Why eCDFs are preferable to histograms?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo">Demo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#callbacks">Callbacks</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../apple/">Apple Stock Dataset</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../flight/">AA Flight Path Dataset</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">HW2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Agricultral Export Dataset</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="agricultral-exports-dataset-of-us-2011">Agricultral Exports Dataset of U.S. (2011)</h1>
+<p>For full dataset view <a href="https://github.com/plotly/datasets/blob/master/2011_us_ag_exports.csv">plotly/datasets/2011_us_ag_exports.csv</a>.</p>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>
+<h3 id="why-the-visualization-is-interesting">Why the visualization is interesting?<br /></h3>
+<ul>
+<li>Users can easily switch between different agricultual product catagory using the dropdown list.</li>
+<li>Any arbitrary number of the chosen states can be compared at the same time.</li>
+<li>This visualization includes <strong>eCDF</strong>.</li>
+</ul>
+</li>
+<li>
+<h3 id="why-ecdfs-are-preferable-to-histograms">Why eCDFs are preferable to histograms?<br /></h3>
+<ol>
+<li><strong>eCDF is as good as histogram</strong><br />
+    &gt; The clusters of data are easily observed in histograms. But clusters can also be seen in eCDF by finding the decreasing slopes.<br />
+    &gt; Histograms are good for identifying the distribution type of data. eCDF can also achieve this by directly apply the Kolmogorov Smirnov test if the CDF of the expected distribution type is plotted.</li>
+<li><strong>eCDF is less biased</strong><br />
+    &gt; In histograms, there is a statistically free parameter: binsize. In one way, you want the binsize infinitesimally small, so that the resolution of the curve becomes perfect. On the other side the binsize has to be big enough so that statistical fluctuations do not destroy the smoothness of the underlying curve. The way you bin the data can result in different spread of data, which may influence how you intepret the result. This is called <em>Binning Bias</em>. </li>
+<li><strong>eCDF handles outliers and infinite values more elegantly</strong><br />
+    &gt; If there is an outlier, the number of bins in the histogram would have to be extended to hold the outlier. If the outlier is far away from the main values and we decide to keep it, the original distribution may become hard to recognize; if we trim the x-axis value, the outlier may not be seen on the diagram at all. In eCDFs, the outlier value is directly visible at the end of the tail. Also the type of the distribution stays visible even with the rescaling of the x-axis as caused by the outlier.<br />
+    &gt; If there is an infinite value, the histogram is unable to show the value. However, in eCDF infinite values can be detected by a line never reaching the upper(y=1) or lower(y=0) boundary.</li>
+<li><strong>eCDF is more informative</strong><br />
+    &gt; Key values and features like minimum, maximum, median, quantiles, percentiles, etc. can be directly read from the eCDF diagram.<br />
+    &gt; An arbitrary number of eCDFs can be plotted into the same axes without any problems for comparisons.</li>
+</ol>
+<p><em>Citations:</em> <br />
+<a href="https://arxiv.org/pdf/0712.3852.pdf"><em>Paper 1</em></a>
+<a href="https://www.sixsigmadaily.com/six-sigma-tools-histogram/#:~:text=The%20main%20advantages%20of%20a,pricing%20plans%20and%20marketing%20campaigns."><em>Website 1</em></a>
+<a href="https://www.andata.at/en/software-blog-reader/why-we-love-the-cdf-and-do-not-like-histograms-that-much.html"><em>Website 2</em></a></p>
+</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<p><img alt="ag_DEMO" src="../demo_pics/ag_DEMO.png" /></p>
+<h2 id="callbacks">Callbacks</h2>
+<p><code>update_ag_export_fig(states,ag_type)</code> - Update the eCDF figure for the states and ag_type selection</p>
+<p><strong>Parameters:</strong><br />
+<strong> - state: </strong> <code>str</code> a list of state names selected by the checklist<br />
+<strong> - ag_type: </strong> <code>str</code> a single agricultral catagory selected by the dropdown<br />
+<strong> - returns: </strong> <code>figure</code> an updated eCDF figure that will be passed into the dcc.Graph component<br /></p>
+<p><img alt="ag_callback" src="../demo_pics/ag_callback.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../apple/" class="btn btn-neutral float-right" title="Apple Stock Dataset">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../apple/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
