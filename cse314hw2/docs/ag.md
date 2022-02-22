@@ -21,10 +21,18 @@ For full dataset view [plotly/datasets/2011_us_ag_exports.csv](https://github.co
         > Key values and features like minimum, maximum, median, quantiles, percentiles, etc. can be directly read from the eCDF diagram.<br />
         > An arbitrary number of eCDFs can be plotted into the same axes without any problems for comparisons.
 
+    *Citations:* <br />
+    [*Paper 1*](https://arxiv.org/pdf/0712.3852.pdf)
+    [*Website 1*](https://www.sixsigmadaily.com/six-sigma-tools-histogram/#:~:text=The%20main%20advantages%20of%20a,pricing%20plans%20and%20marketing%20campaigns.)
+    [*Website 2*](https://www.andata.at/en/software-blog-reader/why-we-love-the-cdf-and-do-not-like-histograms-that-much.html)
+    
+
 ## Demo
 
+![ag_DEMO](demo_pics/ag_DEMO.png)
 
 ## Callbacks
+
 
 `update_ag_export_fig(states,ag_type)` - Update the eCDF figure for the states and ag_type selection
 
@@ -32,3 +40,5 @@ For full dataset view [plotly/datasets/2011_us_ag_exports.csv](https://github.co
 ** - state: ** `str` a list of state names selected by the checklist<br />
 ** - ag_type: ** `str` a single agricultral catagory selected by the dropdown<br />
 ** - returns: ** `figure` an updated eCDF figure that will be passed into the dcc.Graph component<br />
+
+![ag_callback](demo_pics/ag_callback.png)

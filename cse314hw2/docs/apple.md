@@ -10,6 +10,7 @@ For full dataset view [plotly/datasets/2014_apple_stock.csv](https://github.com/
 
 ## Demo
 
+![appl_DEMO](demo_pics/appl_DEMO.png)
 
 ## Callbacks
 
@@ -19,3 +20,5 @@ For full dataset view [plotly/datasets/2014_apple_stock.csv](https://github.com/
 ** - start_date: ** `date object` start date, will be converted to string in `YYYY-MM-DD` format<br />
 ** - end_date: ** `date object`  end date, will be converted to string in `YYYY-MM-DD` format<br />
 ** - returns: ** `figure` a line graph with updated date range that will be passed into the dcc.Graph component<br />
+
+![appl_callback](demo_pics/appl_callback.png)

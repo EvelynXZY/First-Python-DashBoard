@@ -1,6 +1,6 @@
 # CSE314 HW2 Python Dashboards Documentation
 
-For codes visit [EvelynXzy's Github](https://www.mkdocs.org).
+For codes visit [EvelynXzy's Github](https://github.com/EvelynXZY/My-First-Python-Dashboard).
 
 ## Agricultral Exports Dataset of U.S. (2011)
 

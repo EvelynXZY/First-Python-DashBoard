@@ -13,6 +13,9 @@ For full dataset view [2011_february_aa_flight_paths.csv](https://github.com/plo
 
 ## Demo
 
+![ag_DEMO1](demo_pics/aa_DEMO1.png)
+![ag_DEMO2](demo_pics/aa_DEMO2.png)
+![ag_DEMO3](demo_pics/aa_DEMO3.png)
 
 ## Callbacks
 
@@ -31,3 +34,5 @@ For full dataset view [2011_february_aa_flight_paths.csv](https://github.com/plo
 ** - filter_type: ** `str` a selected filter name from the dropdown list<br />
 ** - airport_choice: ** `str` a list of selected airport codes from the airport checklist<br />
 ** - returns: ** `figure`  an updated flight path map that will be passed into the dcc.Graph component<br />
+
+![aa_callback](demo_pics/aa_callback.png)
