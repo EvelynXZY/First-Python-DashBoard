@@ -144,7 +144,7 @@ def update_ag_export_fig(states,ag_type):
     Output("airport_check_list","value"),
     Input("filter_choice","value")
 )
-def update_flight_filter(filter_choice):
+def generate_checklist_from_filter(filter_choice):
     if filter_choice == "By Departure Airport":
         checkboxes = [{"label": i, "value": i} for i in df_flight_paths["airport1"].unique()]
         default_box = ["DFW"]
